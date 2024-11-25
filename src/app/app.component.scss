@@ -1,4 +1,4 @@
-body {
+.container {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   display: flex;
@@ -48,6 +48,10 @@ h1 {
   padding: 0;
 }
 
+#taskList li > * {
+  width: 100%;
+}
+
 #taskList li {
   background-color: #f9f9f9;
   margin-bottom: 8px;
@@ -56,6 +60,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 #taskList li button {

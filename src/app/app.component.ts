@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TachesService } from './services/taches.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'taches';
+
+  tacheService = inject(TachesService);
+
+  task: string = '';
+
+  tasks = this.tacheService.tasks;
+
+  addTask() {
+    this.tacheService.addTask(this.task);
+    this.task = '';
+  }
 }
